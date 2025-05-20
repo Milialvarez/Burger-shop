@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BurgerListComponent } from './burger-list/burger-list.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { BurgerShopContactComponent } from './burger-shop-contact/burger-shop-contact.component';
+import { HomeBurgerShopComponent } from './home-burger-shop/home-burger-shop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BurgerListComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    BurgerShopContactComponent,
+    HomeBurgerShopComponent
   ],
   imports: [
     BrowserModule,

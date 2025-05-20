@@ -8,6 +8,7 @@
             <th>Details</th>
             <th>Precio</th>
             <th>Stock</th>
+            <th>Selected</th>
         </tr>
     </thead>
     <tbody>
@@ -23,9 +24,11 @@
                 <td class="fw-bold text-success">Available</td>
             }
             <td>
-                <button class="btn btn-primary btn-sm" (click)="downQuantity(burger)">-</button>
-                {{burger.quantity}}
-                <button class="btn btn-primary btn-sm" (click)="upQuantity(burger)">+</button>
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-primary btn-sm border border-dark me-2" (click)="downQuantity(burger)">-</button>
+                    <span>{{burger.quantity}}</span>
+                    <button class="btn btn-primary btn-sm border border-dark ms-2" (click)="upQuantity(burger)">+</button>
+                </div>
             </td>
         </tr>
        } @empty {
