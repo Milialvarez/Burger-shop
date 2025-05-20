@@ -15,7 +15,8 @@ export class BurgerListComponent {
     details: "Junior size, double meat with extra bacon and cheese and house dressing",
     price: 5,
     stock: 20,
-    image: "assets/icons/burger.ico"
+    image: "assets/icons/burger.ico",
+    quantity: 0,
   },
   {
     name: "For the kings",
@@ -23,6 +24,7 @@ export class BurgerListComponent {
     price: 10,
     stock: 15,
     image: "assets/icons/burger.ico",
+    quantity: 0,
   },
 {
     name: "Tandil style",
@@ -30,6 +32,21 @@ export class BurgerListComponent {
     price: 12,
     stock: 0,
     image: "assets/icons/burger.ico",
+    quantity: 0,
 }];
   constructor() {}
+
+upQuantity(burger: Burger):void{
+  if(burger.quantity < burger.stock){
+    burger.quantity++;
+  }
 }
+
+downQuantity(burger: Burger):void{
+  if(burger.quantity>0){
+    burger.quantity--;
+  }
+}
+
+}
+

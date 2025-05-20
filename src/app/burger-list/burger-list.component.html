@@ -13,15 +13,20 @@
     <tbody>
        @for(burger of burgers; track burger.name){
         <tr>
-            <img [src]="burger.image" alt="{{ burger.name }}" width="60" height="60" />
+            <img class="img-thumbnail" [src]="burger.image" alt="{{ burger.name }}" width="60" height="60" />
             <td>{{ burger.name}}</td>
             <td> {{burger.details}}</td>
             <td>{{burger.price | currency}} USD</td>
             @if(burger.stock <=0){
-                <td>No stock</td>
+                <td class="fw-bold text-danger">No stock</td>
             } @else {
-                <td>Available</td>
+                <td class="fw-bold text-success">Available</td>
             }
+            <td>
+                <button class="btn btn-primary btn-sm" (click)="downQuantity(burger)">-</button>
+                {{burger.quantity}}
+                <button class="btn btn-primary btn-sm" (click)="upQuantity(burger)">+</button>
+            </td>
         </tr>
        } @empty {
         <tr>
