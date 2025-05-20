@@ -6,7 +6,7 @@
             <th>Reference</th>
             <th>Name</th>
             <th>Details</th>
-            <th>Precio</th>
+            <th>Price</th>
             <th>Stock</th>
             <th>Selected</th>
         </tr>
@@ -14,7 +14,7 @@
     <tbody>
        @for(burger of burgers; track burger.name){
         <tr>
-            <img class="img-thumbnail" [src]="burger.image" alt="{{ burger.name }}" width="60" height="60" />
+            <img class="img-thumbnail" [src]="burger.image" alt="{{ burger.name }}" width="200" height="200" />
             <td>{{ burger.name}}</td>
             <td> {{burger.details}}</td>
             <td>{{burger.price | currency}} USD</td>
