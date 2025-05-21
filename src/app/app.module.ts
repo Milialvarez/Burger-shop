@@ -8,6 +8,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { BurgerShopContactComponent } from './burger-shop-contact/burger-shop-contact.component';
 import { HomeBurgerShopComponent } from './home-burger-shop/home-burger-shop.component';
 import { NavComponentComponent } from './nav-component/nav-component.component';
+import { BurgerShopAboutComponent } from './burger-shop-about/burger-shop-about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponentComponent } from './nav-component/nav-component.component';
     ShoppingCartComponent,
     BurgerShopContactComponent,
     HomeBurgerShopComponent,
-    NavComponentComponent
+    NavComponentComponent,
+    BurgerShopAboutComponent
   ],
   imports: [
     BrowserModule,
