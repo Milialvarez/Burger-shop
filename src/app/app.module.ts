@@ -9,6 +9,7 @@ import { BurgerShopContactComponent } from './burger-shop-contact/burger-shop-co
 import { HomeBurgerShopComponent } from './home-burger-shop/home-burger-shop.component';
 import { NavComponentComponent } from './nav-component/nav-component.component';
 import { BurgerShopAboutComponent } from './burger-shop-about/burger-shop-about.component';
+import { QuantityInputComponent } from './quantity-input/quantity-input.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BurgerShopAboutComponent } from './burger-shop-about/burger-shop-about.
     BurgerShopContactComponent,
     HomeBurgerShopComponent,
     NavComponentComponent,
-    BurgerShopAboutComponent
+    BurgerShopAboutComponent,
+    QuantityInputComponent
   ],
   imports: [
     BrowserModule,

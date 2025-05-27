@@ -24,11 +24,7 @@
                 <td class="fw-bold text-success">Available</td>
             }
             <td>
-                <div class="d-flex align-items-center">
-                    <button class="btn btn-primary btn-sm border border-dark me-2" (click)="downQuantity(burger)">-</button>
-                    <span>{{burger.quantity}}</span>
-                    <button class="btn btn-primary btn-sm border border-dark ms-2" (click)="upQuantity(burger)">+</button>
-                </div>
+                <app-quantity-input [(quantity)]="burger.quantity" [max]="burger.stock" (maxReached)="maxReached($event)"></app-quantity-input>
             </td>
         </tr>
        } @empty {

@@ -8,6 +8,12 @@ import { Burger } from './burger';
   styleUrl: './burger-list.component.scss'
 })
 export class BurgerListComponent {
+
+maxReached($event: string) {
+  alert($event);
+}
+
+
   titleBList: string="Our burgers";
 
   burgers: Burger[] = [{
@@ -36,17 +42,7 @@ export class BurgerListComponent {
 }];
   constructor() {}
 
-upQuantity(burger: Burger):void{
-  if(burger.quantity < burger.stock){
-    burger.quantity++;
-  }
-}
-
-downQuantity(burger: Burger):void{
-  if(burger.quantity>0){
-    burger.quantity--;
-  }
-}
+  
 
 }
 
