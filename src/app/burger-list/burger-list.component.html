@@ -9,6 +9,7 @@
             <th>Price</th>
             <th>Stock</th>
             <th>Selected</th>
+            <th>Buy</th>
         </tr>
     </thead>
     <tbody>
@@ -25,6 +26,9 @@
             }
             <td>
                 <app-quantity-input [(quantity)]="burger.quantity" [max]="burger.stock" (maxReached)="maxReached($event)"></app-quantity-input>
+            </td>
+            <td>
+                <button class="btn btn-secondary" (click)="addToCart(burger)">Buy</button>
             </td>
         </tr>
        } @empty {

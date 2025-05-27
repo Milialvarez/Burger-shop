@@ -1,5 +1,13 @@
-<div class="col-4">
-<h3> {{ titleSCart }} </h3>
+<div>
+    <div class="container d-flex">
+        <img src="assets/icons/shopping_cart_icon.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top me-2">
+        <h3> {{ titleSCart }} </h3>
+    </div>
+    <ul>
+        @for(burger of cartList$ | async; track burger.name){
+        <li>{{ burger.name }}: {{ burger.quantity }}</li>
+        }
+    </ul>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Burger } from './burger';
+import { BurgerCartService } from '../burger-cart.service';
 
 @Component({
   selector: 'app-burger-list',
@@ -40,9 +41,13 @@ maxReached($event: string) {
     image: "assets/tandil_style_burger.jpeg",
     quantity: 0,
 }];
-  constructor() {}
+  constructor(private cart: BurgerCartService) {}
 
-  
+  addToCart(burger:Burger):void{
+    this.cart.addToCart(burger);
+    burger.stock -= burger.quantity;
+    burger.quantity = 0;
+  }
 
 }
 
