@@ -7,7 +7,7 @@
             <th>Name</th>
             <th>Details</th>
             <th>Price</th>
-            <th>Stock</th>
+            <th style="width: 80px;">Stock</th>
             <th>Selected</th>
             <th>Buy</th>
         </tr>
@@ -20,9 +20,9 @@
             <td> {{burger.details}}</td>
             <td>{{burger.price | currency}} USD</td>
             @if(burger.stock <=0){
-                <td class="fw-bold text-danger">No stock</td>
+                <td class="badge rounded-pill text-bg-warning">No stock</td>
             } @else {
-                <td class="fw-bold text-success">Available</td>
+                <td class="badge rounded-pill text-bg-success">Available</td>
             }
             <td>
                 <app-quantity-input [(quantity)]="burger.quantity" [max]="burger.stock" (maxReached)="maxReached($event)"></app-quantity-input>
