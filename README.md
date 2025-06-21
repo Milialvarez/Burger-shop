@@ -6,16 +6,16 @@ Bienvenidos a **The Burger Shop**, una aplicación desarrollada como trabajo fin
 
 ## 📌 Descripción
 
-La temática elegida fue crear una aplicación para un local de hamburguesas llamado **"The Burger Shop"**, en la cual se pueden visualizar hamburguesas disponibles, agregarlas, y realizar funciones administrativas mediante un formulario de log in con validaciones reactivas.
+La temática elegida fue crear una aplicación para un local de hamburguesas llamado **"The Burger Shop"**, en la cual se pueden visualizar hamburguesas disponibles, agregarlas a un carrito de compras, y realizar funciones administrativas como agregar hamburguesas mediante una sección de administración.
 
-El proyecto fue desarrollado utilizando **formularios reactivos**, consumo de **API REST (MockAPI)** y componentes estructurados siguiendo las buenas prácticas de Angular.
+El proyecto fue desarrollado utilizando **formularios reactivos**, consumo de **API REST (MockAPI)** y componentes (standalone y no standalone) siguiendo las buenas prácticas de Angular.
 
 ---
 
 ## 👩‍🎓 Datos de la alumna
 
 - **Nombre:** Milagros Alvarez  
-- **Email:** milagrosalvarez@gmail.com  
+- **Email:** milagrosalvarez2604@gmail.com  
 - **DNI:** 46.555.088  
 - **Sede:** Tandil  
 
