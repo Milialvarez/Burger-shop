@@ -18,11 +18,11 @@ export class AdminResponsabilitiesFormComponent {
   }
 
   formAddBurger = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    details: new FormControl('', [Validators.required]),
+    name: new FormControl('Nordic Style', [Validators.required]),
+    details: new FormControl('Double hake medallion, with spicy mustard, caramelized onion and roquefort cheese', [Validators.required]),
     price: new FormControl(1, [Validators.required, Validators.min(1)]),
     stock: new FormControl(0, [Validators.required, Validators.min(0)]),
-    image: new FormControl('assets/cheese_bacon_burger.webp'),
+    image: new FormControl('assets/nordic_style.webp'),
     quantity: new FormControl(0)
   });
 
