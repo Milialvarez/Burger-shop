@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './admin-section.component.scss'
 })
 export class AdminSectionComponent {
+ isLoggedIn = false;
 
+  handleLoginSuccess() {
+    this.isLoggedIn = true;
+  }
 }
