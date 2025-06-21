@@ -1,0 +1,74 @@
+<div class="container mt-5">
+  <form [formGroup]="formAddBurger" (submit)="onSubmit()" class="p-4 border rounded shadow-sm bg-light">
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name"
+        [class.is-invalid]="formAddBurger.get('name')?.invalid && formAddBurger.get('name')?.touched">
+      <p class="text-danger mt-1 error-msg"
+        *ngIf="formAddBurger.get('name')?.invalid && (formAddBurger.get('name')?.touched || formAddBurger.get('name')?.dirty)">
+        The name field is required
+      </p>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="details" class="form-label">Details</label>
+      <input type="text" id="details" class="form-control" formControlName="details"
+        [class.is-invalid]="formAddBurger.get('details')?.invalid && formAddBurger.get('details')?.touched">
+      <p class="text-danger mt-1 error-msg"
+        *ngIf="formAddBurger.get('details')?.invalid && (formAddBurger.get('details')?.touched || formAddBurger.get('details')?.dirty)">
+        The details field is required
+      </p>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" id="price" class="form-control" formControlName="price"
+        [class.is-invalid]="formAddBurger.get('price')?.invalid && formAddBurger.get('price')?.touched">
+      <p class="text-danger mt-1 error-msg"
+        *ngIf="formAddBurger.get('price')?.invalid && (formAddBurger.get('price')?.touched || formAddBurger.get('price')?.dirty)">
+        The price field is required and the min value is 1
+      </p>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="stock" class="form-label">Stock</label>
+      <input type="number" id="stock" class="form-control" formControlName="stock"
+        [class.is-invalid]="formAddBurger.get('stock')?.invalid && formAddBurger.get('stock')?.touched">
+      <p class="text-danger mt-1 error-msg"
+        *ngIf="formAddBurger.get('stock')?.invalid && (formAddBurger.get('stock')?.touched || formAddBurger.get('stock')?.dirty)">
+        The stock field is required and the min value is 0
+      </p>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Image</label>
+      <input type="text" id="image" class="form-control" formControlName="image">
+
+    </div>
+
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantity</label>
+      <input type="number" id="quantity" class="form-control" formControlName="quantity"
+        [class.is-invalid]="formAddBurger.get('quantity')?.invalid && formAddBurger.get('quantity')?.touched">
+      <p class="text-danger mt-1 error-msg"
+        *ngIf="formAddBurger.get('quantity')?.invalid && (formAddBurger.get('quantity')?.touched || formAddBurger.get('quantity')?.dirty)">
+        The quantity field is required and the min value is 0.
+      </p>
+
+    </div>
+
+    <button [disabled]="formAddBurger.invalid" type="submit" class="btn btn-primary w-100">
+      Add burger
+    </button>
+
+  </form>
+</div>
+
+
+
+<router-outlet />

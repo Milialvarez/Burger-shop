@@ -1,7 +1,7 @@
 <app-nav-component></app-nav-component>
-<h1 class="fw-bold lh-1 ms-3 mt-2">Log in to access to admin functions</h1>
+<h1 class="fw-bold lh-1 ms-3 mt-2" *ngIf="!isLoggedIn" (loginSuccess)="handleLoginSuccess()">Log in to access to admin functions</h1>
+<h1 class="fw-bold lh-1 ms-3 mt-2" *ngIf="isLoggedIn">Add a new burger</h1>
 
 <app-login-form *ngIf="!isLoggedIn" (loginSuccess)="handleLoginSuccess()"></app-login-form>
-<app-admin-responsabilities *ngIf="isLoggedIn"></app-admin-responsabilities>
-
+<app-admin-responsabilities-form *ngIf="isLoggedIn"></app-admin-responsabilities-form>
 <router-outlet />

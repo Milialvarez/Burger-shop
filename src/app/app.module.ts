@@ -13,7 +13,7 @@ import { QuantityInputComponent } from './quantity-input/quantity-input.componen
 import { HttpClientModule } from '@angular/common/http';
 import { AdminSectionComponent } from './admin-section/admin-section.component';
 import { LoginFormComponent } from './login-form/login-form.component';
-import { AdminResponsabilitiesComponent } from './admin-responsabilities/admin-responsabilities.component';
+import { AdminResponsabilitiesFormComponent } from "./admin-responsabilities-form/admin-responsabilities-form.component";
 
 @NgModule({
   declarations: [
@@ -26,14 +26,14 @@ import { AdminResponsabilitiesComponent } from './admin-responsabilities/admin-r
     BurgerShopAboutComponent,
     QuantityInputComponent,
     AdminSectionComponent,
-    AdminResponsabilitiesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     LoginFormComponent,
-    HttpClientModule
-  ],
+    HttpClientModule,
+    AdminResponsabilitiesFormComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })

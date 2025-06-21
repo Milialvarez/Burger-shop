@@ -19,4 +19,8 @@ export class BurgersDataApiService {
   getAll():Observable<Burger[]>{
     return this.http.get<Burger[]>(this.URL).pipe(tap((burgers:Burger[])=>burgers.forEach(burger=> burger.quantity = 0)));
   }
+
+    addBurger(burger: Burger): Observable<Burger> {
+    return this.http.post<Burger>(this.URL, burger);
+  }
 }
