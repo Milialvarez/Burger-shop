@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <form [formGroup]="formLogIn" (submit)="onSubmit()" class="p-4 border rounded shadow-sm bg-light">
+    
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        formControlName="email"
+        [class.is-invalid]="formLogIn.get('email')?.invalid && formLogIn.get('email')?.touched"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        formControlName="password"
+        [class.is-invalid]="formLogIn.get('password')?.invalid && formLogIn.get('password')?.touched"
+      >
+    </div>
+
+    <button
+      [disabled]="formLogIn.invalid"
+      type="submit"
+      class="btn btn-primary w-100"
+    >
+      Log in
+    </button>
+
+  </form>
+</div>
+
+
+<router-outlet />
