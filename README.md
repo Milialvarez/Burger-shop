@@ -32,7 +32,7 @@ Para acceder a las funciones administrativas de la app:
 
 ## 🚀 Enlace a proyecto editable en StackBlitz
 
-🔗 
+🔗 https://stackblitz.com/~/github.com/Milialvarez/Burger-shop
 
 ---
 
