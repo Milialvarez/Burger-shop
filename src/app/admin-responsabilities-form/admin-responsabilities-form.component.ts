@@ -41,7 +41,7 @@ onSubmit() {
 
     this.burgerService.addBurger(burgerToSend).subscribe({
       next: () => {
-        alert('Burger creada exitosamente');
+        alert('BURGER SUCCESSFULLY CREATED');
         this.formAddBurger.reset({
           name: '',
           details: '',
@@ -53,7 +53,7 @@ onSubmit() {
       },
       error: () => {
         console.error('Error al guardar la burger');
-        alert('Ocurrió un error al guardar');
+        alert('AN ERROR OCCURRED WHILE CREATING THE BURGER');
       }
     });
   } else {

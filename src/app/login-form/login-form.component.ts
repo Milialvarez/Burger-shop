@@ -23,10 +23,10 @@ import { RouterModule } from '@angular/router';
     const password = this.formLogIn.value.password;
 
     if (email === "burgerEmail@gmail.com" && password === "burgerPassword") {
-      alert("logued successfully!")
+      alert("SUCCESSFULLY LOGGED!")
       this.loginSuccess.emit();
     } else {
-      alert("Credenciales erroneas")
+      alert("WRONG CREDENTIALS")
     }
   }
 }
