@@ -27,8 +27,12 @@
             <td>
                 <app-quantity-input [(quantity)]="burger.quantity" [max]="burger.stock" (maxReached)="maxReached($event)"></app-quantity-input>
             </td>
-            <td>
-                <button class="btn btn-secondary" (click)="addToCart(burger)">Buy</button>
+           <td>
+                @if(burger.stock > 0) {
+                    <button class="btn btn-secondary" (click)="addToCart(burger)">Buy</button>
+                } @else {
+                    <button class="btn btn-outline-secondary" disabled>Buy</button>
+                }
             </td>
         </tr>
        } @empty {
