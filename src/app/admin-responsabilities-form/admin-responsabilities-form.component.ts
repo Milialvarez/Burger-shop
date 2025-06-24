@@ -18,48 +18,47 @@ export class AdminResponsabilitiesFormComponent {
   }
 
   formAddBurger = new FormGroup({
-    name: new FormControl('Nordic Style', [Validators.required]),
-    details: new FormControl('Double hake medallion, with spicy mustard, caramelized onion and roquefort cheese', [Validators.required]),
-    price: new FormControl(1, [Validators.required, Validators.min(1)]),
-    stock: new FormControl(0, [Validators.required, Validators.min(0)]),
-    image: new FormControl('assets/nordic_style.webp'),
-    quantity: new FormControl(0)
-  });
+  name: new FormControl('Nordic Style', [Validators.required]),
+  details: new FormControl('Double hake medallion, with spicy mustard, caramelized onion and roquefort cheese', [Validators.required]),
+  price: new FormControl(1, [Validators.required, Validators.min(1)]),
+  stock: new FormControl(0, [Validators.required, Validators.min(0)]),
+  image: new FormControl('assets/nordic_style.webp')
+});
 
-  onSubmit() {
-    if (this.formAddBurger.valid) {
-      const burgerData = this.formAddBurger.value;
+onSubmit() {
+  if (this.formAddBurger.valid) {
+    const burgerData = this.formAddBurger.value;
 
-      // Convertí los valores si estás usando type="number"
-      const burgerToSend: Burger = {
-        name: burgerData.name ?? '',
-        details: burgerData.details ?? '',
-        price: Number(burgerData.price),
-        stock: Number(burgerData.stock),
-        image: burgerData.image ?? '',
-        quantity: Number(burgerData.quantity)
-      };
+    // Convertí los valores y agregá quantity: 0 directamente
+    const burgerToSend: Burger = {
+      name: burgerData.name ?? '',
+      details: burgerData.details ?? '',
+      price: Number(burgerData.price),
+      stock: Number(burgerData.stock),
+      image: burgerData.image ?? '',
+      quantity: 0  // Siempre 0, no viene del formulario
+    };
 
-
-      this.burgerService.addBurger(burgerToSend).subscribe({
-        next: () => {
-          alert('Burger creada exitosamente');
-          this.formAddBurger.reset({
-            name: '',
-            details: '',
-            price: 1,
-            stock: 0,
-            image: 'assets/cheese_bacon_burger.webp',
-            quantity: 0
-          });
-        },
-        error: () => {
-          console.error('Error al guardar la burger');
-          alert('Ocurrió un error al guardar');
-        }
-      });
-    } else {
-      this.formAddBurger.markAllAsTouched();
-    }
+    this.burgerService.addBurger(burgerToSend).subscribe({
+      next: () => {
+        alert('Burger creada exitosamente');
+        this.formAddBurger.reset({
+          name: '',
+          details: '',
+          price: 1,
+          stock: 0,
+          image: 'assets/cheese_bacon_burger.webp'
+          // Ya no necesitás resetear quantity
+        });
+      },
+      error: () => {
+        console.error('Error al guardar la burger');
+        alert('Ocurrió un error al guardar');
+      }
+    });
+  } else {
+    this.formAddBurger.markAllAsTouched();
   }
+}
+
 }
