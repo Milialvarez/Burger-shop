@@ -52,7 +52,6 @@ onSubmit() {
         });
       },
       error: () => {
-        console.error('Error al guardar la burger');
         alert('AN ERROR OCCURRED WHILE CREATING THE BURGER');
       }
     });

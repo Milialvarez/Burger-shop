@@ -1,4 +1,5 @@
 export interface Burger{
+    id?: number;
     name: string;
     details: string;
     price: number;

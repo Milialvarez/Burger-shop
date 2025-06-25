@@ -22,11 +22,21 @@ maxReached($event: string) {
 
   constructor(private cart: BurgerCartService, private burger_data: BurgersDataApiService) {}
 
-  addToCart(burger:Burger):void{
-    this.cart.addToCart(burger);
-    burger.stock -= burger.quantity;
-    burger.quantity = 0;
-  }
+  addToCart(burger: Burger): void {
+  const updatedBurger = { ...burger, stock: burger.stock - burger.quantity }; //actualizo el stock al agregar una hamburguesa al carrito
+  
+  this.burger_data.updateBurgerStock(updatedBurger).subscribe({
+    next: (updated) => {
+      this.cart.addToCart(burger);
+      burger.stock = updated.stock;
+      burger.quantity = 0;
+    },
+    error: (err) => {
+      console.error('An error occurred updating the stock', err);
+    }
+  });
+}
+
 
   ngOnInit(): void{
     this.burger_data.getAll().subscribe(burgers=>this.burgers = burgers);

@@ -23,4 +23,9 @@ export class BurgersDataApiService {
     addBurger(burger: Burger): Observable<Burger> {
     return this.http.post<Burger>(this.URL, burger);
   }
+
+  updateBurgerStock(burger: Burger): Observable<Burger> {
+  return this.http.put<Burger>(`${this.URL}/${burger.id}`, burger);
+}
+
 }

@@ -16,6 +16,7 @@ export class BurgerCartService {
       this._cartList.push({... burger});
     }else{
       item.quantity += burger.quantity;
+      item.stock -= burger.quantity;
     }
     this.cartList.next(this._cartList);
   }
