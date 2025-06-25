@@ -6,9 +6,9 @@ Bienvenidos a **The Burger Shop**, una aplicación desarrollada como trabajo fin
 
 ## 📌 Descripción
 
-La temática elegida fue crear una aplicación para un local de hamburguesas llamado **"The Burger Shop"**, en la cual se pueden visualizar hamburguesas disponibles, agregarlas a un carrito de compras, y realizar funciones administrativas como agregar hamburguesas mediante una sección de administración.
+La temática elegida fue crear una aplicación para un local de hamburguesas llamado **"The Burger Shop"**, en la cual se pueden visualizar hamburguesas disponibles, agregarlas a un carrito de compras, y realizar funciones administrativas como agregar hamburguesas mediante una sección de administración (ver credenciales de logueo).
 
-El proyecto fue desarrollado utilizando **formularios reactivos**, consumo de **API REST (MockAPI)** y componentes (standalone y no standalone) siguiendo las buenas prácticas de Angular.
+El proyecto fue desarrollado utilizando **formularios reactivos**, consumo de **API REST (MockAPI)** y **componentes** (standalone y no standalone) siguiendo las buenas prácticas de Angular.
 
 ---
 
@@ -46,3 +46,9 @@ En la sección **ADMINISTRATION**, una vez logueado usando las credenciales enco
 - Reactive Forms
 - MockAPI (para simular base de datos)
 - Git + GitHub
+
+---
+
+## 📣 Recomendación
+
+- Abrir la consola a la hora de ejecutar el botón **Buy** para visualizar cómo se ejecuta la actualización del stock ante una agregada al carrito
