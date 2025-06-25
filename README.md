@@ -28,6 +28,8 @@ Para acceder a las funciones administrativas de la app:
 - **Email:** `burgerEmail@gmail.com`  
 - **Password:** `burgerPassword`
 
+En la sección **ADMINISTRATION**, una vez logueado usando las credenciales encontrará los campos previamente cargados con una hamburguesa que no ha sido cargada aun (fue dejada especialmente para que puedan hacer la prueba).
+
 ---
 
 ## 🚀 Enlace a proyecto editable en StackBlitz
