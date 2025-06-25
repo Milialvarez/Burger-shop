@@ -28,8 +28,10 @@ maxReached($event: string) {
   this.burger_data.updateBurgerStock(updatedBurger).subscribe({
     next: (updated) => {
       this.cart.addToCart(burger);
+      console.log("previous stock: "+burger.stock);
       burger.stock = updated.stock;
       burger.quantity = 0;
+      console.log("updated stock: "+burger.stock);
     },
     error: (err) => {
       console.error('An error occurred updating the stock', err);
